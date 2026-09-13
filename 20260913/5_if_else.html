@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>條件判斷</title>
+</head>
+
+<body>
+  <h1>條件判斷</h1>
+  <script>
+
+    const age = 20;
+    if (age > 18) {
+      console.log('成年');
+      console.log('可以喝酒');
+      console.log('可以開車');
+      console.log('可以獨自生活');
+    }
+    console.clear();
+
+    const weather = 'rainy';
+    if (weather === 'sunny') console.log('可出門玩');
+    else console.log('待在家');
+
+
+    console.log('結束');
+
+
+    // 多重條件 if else if (等價 nesting)
+    //-------------------------------------
+    console.clear();
+
+    const qMonth = 9; // Q1(0-2), q2(3-5), q3(6-8), q4(9-11)
+
+    //- v3 -
+    // 限定合法我想要的資料才可以進來正常執行
+    if (typeof (qMonth) === 'number' && 0 <= qMonth && qMonth < 12) {
+      if (qMonth < 3) console.log('Q1賽季');
+      else if (qMonth < 6) console.log('Q2賽季');
+      else if (qMonth < 9) console.log('Q3賽季');
+      else console.log('Q4賽季');
+    } else console.log('qMonth 數據無效');
+
+
+
+
+    //- v2 -------------簡化, else if 可以合併,因為 else 後面的 IF-else 算單筆
+    // if (qMonth < 3) {
+    //   console.log('Q1賽季');
+    //   console.log('Q1賽季');
+    // } else if (qMonth < 6) {
+    //   console.log('Q2賽季');
+    //   console.log('Q2賽季');
+    // } else if (qMonth < 9) {
+    //   console.log('Q3賽季');
+    //   console.log('Q3賽季');
+    // } else {
+    //   console.log('Q4賽季');
+    //   console.log('Q4賽季');
+    // }
+
+    // v1---------------------------
+    // if (qMonth < 3) {
+    //   console.log('Q1賽季');
+    //   console.log('Q1賽季');
+    // } else {
+    //   if (qMonth < 6) {
+    //     console.log('Q2賽季');
+    //     console.log('Q2賽季');
+    //   } else {
+    //     if (qMonth < 9) {
+    //       console.log('Q3賽季');
+    //       console.log('Q3賽季');
+    //     } else {
+    //       console.log('Q4賽季');
+    //       console.log('Q4賽季');
+    //     }
+    //   }
+    // }
+
+
+
+
+
+
+
+    // if (season === 'spring') console.log('春天');
+    // else if (season === 'summer') console.log('夏天');
+    // else if (season === 'fall') console.log('秋天');
+    // else if (season === 'winter') console.log('冬天');
+    // else console.log('請輸入正確的季節');
+
+
+
+
+  </script>
+</body>
+
+</html>

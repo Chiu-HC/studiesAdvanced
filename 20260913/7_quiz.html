@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>練習 1：成績等級判斷</h1>
+  <code><pre>
+練習 1：成績等級判斷
+根據分數給出等級：
+
+A: 90-100
+B: 80-89
+C: 70-79
+D: 60-69
+F: 0-59
+規劃一變數score如果賦值95，經判斷後 console 顯示分數 95 的等級是：A。
+  </pre></code>
+  <script>
+    const score = 95;
+    let level;
+
+    // if (score >= 90) level = 'A';
+    // else if (score >= 80) level = 'B';
+    // else if (score >= 70) level = 'C';
+    // else if (score >= 60) level = 'D';
+    // else level = 'F';
+
+    switch (true) {
+      case score >= 90: level = 'A'; break;
+      case score >= 80: level = 'B'; break;
+      case score >= 70: level = 'C'; break;
+      case score >= 60: level = 'D'; break;
+      default: level = 'F'; break;
+    }
+
+    console.log(`分數 ${score} 的等級是：${level}`);
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switch</title>
+</head>
+
+<body>
+  <h1>Switch 根據value 進行不同的路線</h1>
+  <script>
+    const day = 2;
+    switch (day) {
+      case 1:
+        console.log('星期一');
+        break; // 為了確保讀到這裡的時，直接破壞區間, 不再讀取其他下列的指令
+      case 2:
+        console.log('星期二');
+        break;
+      case 3:
+        console.log('星期三');
+        break;
+      default:
+        console.log('其他');
+        break;
+    }
+
+    console.log('結束');
+    console.clear();
+
+
+    // C — Common（普通）
+    // U — Uncommon（不普通）
+    // R — Rare（稀有）
+    // RR — Double Rare（雙重稀有）
+    // AR — Art Rare（藝術稀有）
+    // SR — Super Rare（超級稀有）
+    // SAR — Special Art Rare（特殊藝術稀有）
+    // UR — Ultra Rare（超級／究極稀有）
+    const cardLevel = 'AAR';
+
+    switch (cardLevel) {
+      case 'C':
+      case 'U':
+      case 'R':
+        console.log('丟垃圾桶，不值錢');
+        break;
+      case 'RR':
+      case 'AR':
+      case 'SR':
+        console.log('留著保值或賣掉');
+        break;
+      default:
+        console.log('兄弟你賺大發了');
+        break;
+    }
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

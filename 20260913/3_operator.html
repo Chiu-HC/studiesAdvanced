@@ -142,6 +142,27 @@
 
     // authAction(true);
 
+    // 三元運算子
+    // --------------------------------
+    const age = 25;
+    const message = true ? '成年' : '未成年';
+    console.log(message);
+
+    // nesting 巢狀
+    const grade = 90;
+    // let level =
+    //   grade >= 90 ?
+    //     '甲等' :
+    //     grade >= 70 ?
+    //       '乙等' :
+    //       '丙等';
+    let level = grade >= 90 ? '甲等' : grade >= 70 ? '乙等' : '丙等';
+    console.log(level);
+
+
+    // 設定預設值
+    // let userName = userInput || '訪客';  // 如果 userInput 為空，使用 '訪客'
+    let userName = userInput ? userInput : '訪客';
 
   </script>
 </body>
