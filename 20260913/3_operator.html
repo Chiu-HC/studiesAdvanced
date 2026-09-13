@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>運算子</title>
+</head>
+
+<body>
+  <h1>運算子</h1>
+  <script>
+    let a = 10;
+    let b = 3;
+
+    // 算術運算子
+    console.log(a + b);
+    console.log(a - b);
+    console.log(a * b);
+    console.log(a / b);
+    console.log(a % b); // 取餘數
+    console.log(a ** b); // 次方 , A^B = 10 的 3 次方
+    console.clear();
+
+    let c = 5;
+    c = a + b; // c=13
+    c = c + 1; // c= 13 + 1 
+    c = c + 1; // c= 14 + 1 
+    c = c + 1; // c= 15 + 1 
+    c = c + 1; // c= 16 + 1 
+
+    c++; // 18,  這行結束後才會對自己加 1
+    // c--; // 17 這行結束後才會對自己減 1
+    // ++c; // 19,  這行開始前先加 1, 少見可不學, 有機會示範
+
+    console.clear();
+
+    // 複合運算子
+    a = a + 2;
+    a += 2; // a = a + 2
+    a += 10; // a = a + 10
+    a -= 10; // a = a - 10
+    a *= 10; // a = a * 10
+    a /= 10; // a = a / 10
+
+    let name = 'Loki';
+    // name = name + ' Jiang';
+    name += ' Jiang'; // name = name + ' Jiang'
+
+    // 比較運算子
+    //--------------------------------
+    console.clear();
+    console.log(a, b);
+
+    console.log(a == b);
+    console.log(a != b);
+
+    strA = '10';
+    numA = 10;
+    console.log(strA, numA);
+    console.log(strA == numA); // 不考慮型別的比較
+    console.log(strA === numA); // 嚴格比對，包含型別的比較
+    console.log('-----------------');
+    console.log(strA != numA); // 不考慮型別的比較
+    console.log(strA !== numA); // 嚴格比對，包含型別的比較
+
+    console.clear();
+
+    let numC = 10;
+    let numD = numC;
+
+    // numC = 20;
+    console.log(numC, numD);
+
+    console.log(numC > numD);
+    console.log(numC < numD);
+    console.log(numC >= numD);
+    console.log(numC <= numD);
+
+    // 邏輯運算子
+    // --------------------------------
+    console.clear();
+
+    /* AND 運算子 '當 && 兩邊都為 true 時，回答 true'
+    回答的程式動作如下
+
+    其實是把右邊的值丟給你
+    T = T && T
+    F = T && F
+
+    其實是把左邊的值丟給你
+    F = F && T
+    F = F && F
+
+    F = T && F && ??
+
+    T = T && T && T
+    F = T && T && F
+    */
+    // const answer = isAdult && hasLicense;
+
+    const theAND = true && false && 'Loki';
+    console.log(theAND);
+
+    /* OR 運算子 '當 || 兩邊某一邊為 true 時，回答 true'
+    回答的程式動作如下
+
+    A = ??
+
+    //  OR 左邊非 false, 就提早返回
+    A = T || ??   (T)
+
+//  OR 左邊是 false, 改成右邊返回(或繼續往下找)
+    A = F || T    (T)
+    A = F || F    (F)
+    A = F || F || ??    (F)
+    */
+
+    console.clear();
+    const theOR = false || false || NaN || 'Max';
+    console.log(theOR);
+
+
+    // NOT 運算子, 將當前的值(可以是BOOLEAN 或任何東西)反轉為boolean
+    console.clear();
+    // const theNOT = !true;
+    let checkVar = 0;
+    const theNOT = !!checkVar; // 數字可以當有東西(true)遇到反轉
+    console.log(theNOT);
+
+
+    console.log(true && false || true);
+
+
+
+    console.clear();
+    // -------------------  
+    // function authAction(isLoggedIn = false) {
+    //   isLoggedIn && alert("歡迎回來！");  // 只有 isLoggedIn 為 true 才執行
+    //   isLoggedIn && prompt("請輸入密碼");
+    // }
+
+    // authAction(true);
+
+
+  </script>
+</body>
+
+</html>

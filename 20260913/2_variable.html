@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>基本資料型別 data model (type)</h1>
+  <script>
+    const word1 = 'world';
+
+    console.log('hello world, welcome!!');
+    console.log('hello ' + word1 + ', welcome!!');
+    // 偷跑教學字串模板
+    console.log(`hello ${word1}, welcome!!`);
+
+    console.clear();
+
+    // 數字
+    //------------------------------------------
+    const age = 25;
+    const pi = 3.14;
+    const bb = -0.5;
+
+    // console.log(age);
+    // console.log(pi);
+    // console.log(bb);
+    // console.log(age, pi, bb);
+
+    // console.log(age, '的型別為', typeof age);
+    console.log(`age 的 value = ${age}, 其 type 為 ${typeof age}`);
+    console.log(`pi 的 value = ${pi}, 其 type 為 ${typeof pi}`);
+    console.log(`bb 的 value = ${bb}, 其 type 為 ${typeof bb}`);
+
+    // const infinity = 10 / 0;
+    const infinity = Infinity;
+    console.log(typeof infinity, infinity);
+
+    // const notANumber = 0 / 0;
+    // const notANumber = 'loki' - 200;
+    const notANumber = NaN;
+    console.log(typeof notANumber, notANumber);
+
+    // 字串 string
+    //------------------------------------------
+    console.clear();
+
+    const name = 'Loki';
+    const adWords = `Hello ${name}`;
+    console.log(`
+${adWords},
+welcome to my website`);
+
+    // const msg = '老闆說: "最後下班要關窗"，颳風了';
+    // const msg = '老闆的兒子說: "最後下班要關窗"，颳風了';
+    // const msg = 'boss\'s child said:\n "最後下班要關窗"，颳風了';
+    const msg = `boss's child said:
+"最後下班要關窗"，颳風了`;
+
+    console.log(msg);
+
+    // 布林值 boolean
+    //------------------------------------------
+    console.clear();
+
+    const isTrue = true;
+    const isFalse = false;
+
+    console.log(typeof isTrue, isTrue);
+    console.log(typeof isFalse, isFalse);
+
+    // 物件 object
+    //------------------------------------------  
+    console.clear();
+
+    const obj = {
+      name: 'loki',
+      age: 25
+    };
+    console.log(typeof obj, obj);
+
+    const noData = null;
+    console.log(typeof noData, noData);
+    let noValue = undefined;
+    console.log(typeof noValue, noValue);
+
+  </script>
+</body>
+
+</html>
